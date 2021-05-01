@@ -1,45 +1,42 @@
-var content = document.getElementById("content");
 var squareBehindTop = document.getElementById("square-top");
 var squareBehindBottom = document.getElementById("square-bottom");
-
 var foldDuration = '1s';
 var foldDelay = '1s';
 //this should be the total time for transitions to complete
 var destroyFlippersDelay = 3000;
+var currentPageTitle = "blank"
 
-var currentPanelTitle = "blank"
+preloadImages();
 
 //called after assets have loaded
 function startInteraction(){
-  document.getElementById("loading-screen").style.display = "none";
+  setSquareBackgroundImages(getPageByTitle("home"));  
+  document.getElementById("loading-screen").style.top = '110vh';
+  setTimeout( ()=> {
+    document.getElementById("loading-screen").style.display = "none";
+  }, 3000);
 }
 
-function goToPanel(nextPanelTitle){
-  var lastPanel = getPanelByTitle(currentPanelTitle);
-  var nextPanel = getPanelByTitle(nextPanelTitle);
+function goToPage(nextPageTitle){
+  var lastPage = getPageByTitle(currentPageTitle);
+  var nextPage = getPageByTitle(nextPageTitle);
   
-  //overlay front squares
-  overlayFlippers(lastPanel.topImageSrc, lastPanel.bottomImageSrc);
-  
-  //set behind squares with next panel
-  squareBehindTop.style.backgroundImage = "url('" + nextPanel.topImageSrc + "')";
-  squareBehindBottom.style.backgroundImage = "url('" + nextPanel.bottomImageSrc + "')";
-
-  //fold flippers
-  setTimeout(fold, 0);
-
-  //destroy flippers after animation
+  overlayFlippers(lastPage.topImageSrc, lastPage.bottomImageSrc);
+  setSquareBackgroundImages(nextPage);
+  setTimeout(foldFlippers, 0);
   setTimeout( destroyFlippers, destroyFlippersDelay );
 
-  currentPanelTitle = nextPanelTitle;
+  currentPageTitle = nextPageTitle;
 }
 
-
-function home(){
-  content.style.backgroundImage = "url('images/home/home.jpg')";
-  // squareBottom.style.display = "none";
-  // squareTop.style.display = "none";
+function setSquareBackgroundImages(page){
+  squareBehindTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
+  squareBehindBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
 }
+
+// function home(){
+//   content.style.backgroundImage = "url('images/home/home.jpg')";
+// }
 
 function overlayFlippers(topImage, bottomImage){
   createFlippers();
@@ -47,7 +44,7 @@ function overlayFlippers(topImage, bottomImage){
   var flipperTop = document.getElementById("flipper-top");
   var flipperBottom = document.getElementById("flipper-bottom");
 
-  //set front squares with current panels
+  //set front squares with current pages
   flipperTop.style.backgroundImage = "url('" + topImage + "')";
   flipperBottom.style.backgroundImage = "url('" + bottomImage + "')";
 }
@@ -70,7 +67,8 @@ function createFlippers(){
   squareBehindBottom.appendChild(flipper);
 }
 
-function fold(){
+
+function foldFlippers(){
   console.log("flipping");
   var flipperTop = document.getElementById("flipper-top");
   var flipperBottom = document.getElementById("flipper-bottom");
