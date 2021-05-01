@@ -1,0 +1,56 @@
+:root{
+  --bg-color: #1e1e3d;
+  --content-margin: 10px;
+  --content-height: calc(100vh - 2* var(--content-margin));
+  --content-width: calc(var(--content-height)/ 2);
+  overflow: hidden;
+}
+
+.container{
+  background-image: url('images/comic/p00dark.jpg');
+  background-size: 100vw;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.content{
+  font-size: 25vh;
+  width: var(--content-width);
+  height: var(--content-height);
+  background-size: contain;
+}
+
+.square{
+  height: var(--content-width);
+  width: var(--content-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  background-size: contain;
+}
+
+.flipper{
+  position: absolute;
+  width: var(--content-width);
+  backface-visibility: hidden;
+}
+
+
+@media (max-width: 500px) {
+  :root{
+    --content-margin: 0px;
+  }
+  
+  /* .container{
+    width:100vw;
+  } */
+
+  /* .square{
+    width: 100vw;
+  } */
+
+}
