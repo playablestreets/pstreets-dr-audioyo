@@ -6,7 +6,6 @@ class Panel{
   }
 }
 
-const preloadDiv = document.getElementById("preload");
 const panels = [];
 
 panels.push( new Panel("home", "images/home/home-top.jpg", "images/home/home-bottom.jpg"));
@@ -36,6 +35,8 @@ function tallyLoadedImage(){
 preloadImages();
 
 function preloadImages(){
+  let preloadDiv = document.getElementById("preload");
+
   console.log(numImages + " to load...");
   panels.forEach( p =>{
     var imgId = p.title + "-image-top"; 
@@ -71,10 +72,10 @@ function onAllImagesPreloaded(){
     document.getElementById("loading-screen").style.top = '110vh';
 
     //then disable 2 seconds later (probably not needed)
-    setTimeout( () =>{
-      document.getElementById("loading-screen").style.display = "none";
-    },
-    2000);
+    // setTimeout( () =>{
+    //   document.getElementById("loading-screen").style.display = "none";
+    // },
+    // 2000);
 
   }, 3000);
 
