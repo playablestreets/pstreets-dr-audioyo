@@ -1,12 +1,12 @@
 var squareBehindTop = document.getElementById("square-top");
 var squareBehindBottom = document.getElementById("square-bottom");
-var foldDuration = '1s';
-var foldDelay = '1s';
+var foldDuration = '2s';
+var foldDelay = '2s';
 //this should be the total time for transitions to complete
-var destroyFlippersDelay = 3000;
-var currentPageTitle = "blank"
+var destroyFlippersDelay = 4500;
+var currentPageTitle = "home"
 
-preloadImages();
+imagePreloader.preloadImages(startInteraction);
 
 //called after assets have loaded
 function startInteraction(){
@@ -34,16 +34,10 @@ function setSquareBackgroundImages(page){
   squareBehindBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
 }
 
-// function home(){
-//   content.style.backgroundImage = "url('images/home/home.jpg')";
-// }
-
 function overlayFlippers(topImage, bottomImage){
   createFlippers();
-
   var flipperTop = document.getElementById("flipper-top");
   var flipperBottom = document.getElementById("flipper-bottom");
-
   //set front squares with current pages
   flipperTop.style.backgroundImage = "url('" + topImage + "')";
   flipperBottom.style.backgroundImage = "url('" + bottomImage + "')";
@@ -69,10 +63,8 @@ function createFlippers(){
 
 
 function foldFlippers(){
-  console.log("flipping");
   var flipperTop = document.getElementById("flipper-top");
   var flipperBottom = document.getElementById("flipper-bottom");
-
   flipperTop.style.transitionDuration = foldDuration;
   flipperBottom.style.transitionDuration = foldDuration;
   flipperBottom.style.transitionDelay = foldDelay;
@@ -81,7 +73,6 @@ function foldFlippers(){
 }
 
 function destroyFlippers(){
-  console.log("destroying flippers");
   var flippers = document.getElementsByClassName("flipper");
   while(flippers.length > 0){
     flippers[0].parentNode.removeChild(flippers[0]);
