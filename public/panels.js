@@ -69,14 +69,17 @@ function onAllImagesPreloaded(){
 
   setTimeout( () => {
     //after 3 seconds slide loading screen down
+    document.getElementById("square-top").style.backgroundImage = "url('" + getPanelByTitle("home").topImageSrc + "')";
+    document.getElementById("square-bottom").style.backgroundImage = "url('" + getPanelByTitle("home").bottomImageSrc + "')";
+  
     document.getElementById("loading-screen").style.top = '110vh';
 
     //then disable 2 seconds later (probably not needed)
-    // setTimeout( () =>{
-    //   document.getElementById("loading-screen").style.display = "none";
-    // },
-    // 2000);
+    setTimeout( () =>{
+      startInteraction();
+    },
+    3000);
 
-  }, 3000);
+  }, 4000);
 
 }

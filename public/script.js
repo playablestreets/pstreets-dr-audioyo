@@ -9,19 +9,21 @@ var destroyFlippersDelay = 3000;
 
 var currentPanelTitle = "blank"
 
-//Load home page
-goToPanel("home");
+//called after assets have loaded
+function startInteraction(){
+  document.getElementById("loading-screen").style.display = "none";
+}
 
 function goToPanel(nextPanelTitle){
   var lastPanel = getPanelByTitle(currentPanelTitle);
   var nextPanel = getPanelByTitle(nextPanelTitle);
   
   //overlay front squares
-  overlayFlippers(lastPanel.topImage, lastPanel.bottomImage);
+  overlayFlippers(lastPanel.topImageSrc, lastPanel.bottomImageSrc);
   
   //set behind squares with next panel
-  squareBehindTop.style.backgroundImage = "url('" + nextPanel.topImage + "')";
-  squareBehindBottom.style.backgroundImage = "url('" + nextPanel.bottomImage + "')";
+  squareBehindTop.style.backgroundImage = "url('" + nextPanel.topImageSrc + "')";
+  squareBehindBottom.style.backgroundImage = "url('" + nextPanel.bottomImageSrc + "')";
 
   //fold flippers
   setTimeout(fold, 0);

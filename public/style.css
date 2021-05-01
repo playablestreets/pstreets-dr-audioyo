@@ -5,6 +5,7 @@
   --content-width: calc(var(--content-height)/ 2);
   overflow: hidden;
 }
+
 html, body{
   height: 100%;
   overflow: hidden;
@@ -32,7 +33,7 @@ html, body{
 }
 
 .container{
-  background-image: url('images/comic/p00dark.jpg');
+  /* background-image: url('images/comic/p00dark.jpg'); */
   background-color: var(--bg-color);
   display: flex;
   justify-content: space-around;
