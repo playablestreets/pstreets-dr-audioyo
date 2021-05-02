@@ -3,7 +3,7 @@ var squareBehindBottom = document.getElementById("square-bottom");
 var foldDuration = '2s';
 var foldDelay = '2s';
 //this should be the total time for transitions to complete
-var destroyFlippersDelay = 4500;
+var destroyFlippersDelay = 4000;
 var currentPageTitle = "home"
 
 imagePreloader.preloadImages(startInteraction);
@@ -39,16 +39,16 @@ function setSquaresBackgroundImages(page){
 }
 
 function setSquaresInnerHTML(page){
-  destroyElementsByClassName("innerContainer");
+  destroyElementsByClassName("inner-container");
 
   var squareInnerContainer = document.createElement('div');
-  squareInnerContainer.className = "square innerContainer";
+  squareInnerContainer.className = "square inner-container";
   squareInnerContainer.id = "square-inner-top";
   squareInnerContainer.innerHTML = page.topInnerHTML;
   squareBehindTop.appendChild(squareInnerContainer);
 
   squareInnerContainer = document.createElement('div');
-  squareInnerContainer.className = "square innerContainer";
+  squareInnerContainer.className = "square inner-container";
   squareInnerContainer.id = "square-inner-bottom";
   squareInnerContainer.innerHTML = page.bottomInnerHTML;
   squareBehindBottom.appendChild(squareInnerContainer);

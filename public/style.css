@@ -43,7 +43,6 @@ html, body{
 
 
 .content{
-  font-size: 25vh;
   width: var(--content-width);
   height: var(--content-height);
   background-size: contain;
@@ -71,4 +70,8 @@ html, body{
   width: var(--content-width);
   backface-visibility: hidden;
   z-index: 2;
+}
+
+.inner-container{
+  font-size: 12vh;
 }
