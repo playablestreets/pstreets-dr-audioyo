@@ -1,5 +1,5 @@
 :root{
-  --bg-color: #1e1e3d;
+  --bg-color: #1b1b3a;
   --content-margin: 10px;
   --content-height: calc(100vh - 2* var(--content-margin));
   --content-width: calc(var(--content-height)/ 2);
@@ -19,7 +19,7 @@ html, body{
 .loading-screen{
   width: 100vw;
   height:100vh;
-  background-color: rgb(22, 22, 59);
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,15 +70,5 @@ html, body{
   position: absolute;
   width: var(--content-width);
   backface-visibility: hidden;
+  z-index: 2;
 }
-
-
-/* @media (max-aspect-ratio: 5.5/8) {
-  :root{
-    --content-margin: 0px;
-    --content-height: 200vw;
-  }
-  
-
-
-} */

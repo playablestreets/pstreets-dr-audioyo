@@ -10,7 +10,7 @@ imagePreloader.preloadImages(startInteraction);
 
 //called after assets have loaded
 function startInteraction(){
-  setSquareBackgroundImages(getPageByTitle("home"));  
+  setSquaresToPage(getPageByTitle("home"));  
   document.getElementById("loading-screen").style.top = '110vh';
   setTimeout( ()=> {
     document.getElementById("loading-screen").style.display = "none";
@@ -21,26 +21,46 @@ function goToPage(nextPageTitle){
   var lastPage = getPageByTitle(currentPageTitle);
   var nextPage = getPageByTitle(nextPageTitle);
   
-  overlayFlippers(lastPage.topImageSrc, lastPage.bottomImageSrc);
-  setSquareBackgroundImages(nextPage);
+  overlayFlippers(lastPage);
+  setSquaresToPage(nextPage);
   setTimeout(foldFlippers, 0);
   setTimeout( destroyFlippers, destroyFlippersDelay );
-
   currentPageTitle = nextPageTitle;
 }
 
-function setSquareBackgroundImages(page){
+function setSquaresToPage(page){
+  setSquaresBackgroundImages(page);
+  setSquaresInnerHTML(page);
+}
+
+function setSquaresBackgroundImages(page){
   squareBehindTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
   squareBehindBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
 }
 
-function overlayFlippers(topImage, bottomImage){
+function setSquaresInnerHTML(page){
+  destroyElementsByClassName("innerContainer");
+
+  var squareInnerContainer = document.createElement('div');
+  squareInnerContainer.className = "square innerContainer";
+  squareInnerContainer.id = "square-inner-top";
+  squareInnerContainer.innerHTML = page.topInnerHTML;
+  squareBehindTop.appendChild(squareInnerContainer);
+
+  squareInnerContainer = document.createElement('div');
+  squareInnerContainer.className = "square innerContainer";
+  squareInnerContainer.id = "square-inner-bottom";
+  squareInnerContainer.innerHTML = page.bottomInnerHTML;
+  squareBehindBottom.appendChild(squareInnerContainer);
+}
+
+function overlayFlippers(page){
   createFlippers();
   var flipperTop = document.getElementById("flipper-top");
   var flipperBottom = document.getElementById("flipper-bottom");
   //set front squares with current pages
-  flipperTop.style.backgroundImage = "url('" + topImage + "')";
-  flipperBottom.style.backgroundImage = "url('" + bottomImage + "')";
+  flipperTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
+  flipperBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
 }
 
 function createFlippers(){
@@ -72,9 +92,13 @@ function foldFlippers(){
   flipperBottom.style.transform = "rotateY(-90deg)";
 }
 
-function destroyFlippers(){
-  var flippers = document.getElementsByClassName("flipper");
+function destroyElementsByClassName(className){
+  var flippers = document.getElementsByClassName(className);
   while(flippers.length > 0){
     flippers[0].parentNode.removeChild(flippers[0]);
   }
+}
+
+function destroyFlippers(){
+  destroyElementsByClassName("flipper");
 }
