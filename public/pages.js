@@ -24,7 +24,7 @@ pages.push( new Page(
   "images/comic/p00light.jpg", 
   "images/comic/p01.jpg",
   "",
-  "<p onclick=goToPage(\"page02\")>👆</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"page02\")></div>"
 ));
 
 // page02
@@ -33,7 +33,7 @@ pages.push( new Page(
   "images/comic/p02.jpg", 
   "images/comic/p03.jpg",
   "",
-  "<p onclick=goToPage(\"page03\")>👇</p>"
+  "<div class=\"p02-arrow-down arrow\" onclick=goToPage(\"page03\")></div>"
 ));
 
 // page03
@@ -42,9 +42,9 @@ pages.push( new Page(
   "images/comic/p04.jpg", 
   "images/comic/p05.jpg",
   "",
-  "<p onclick=goToPage(\"page04\")>👈</p>\
-  <p onclick=goToPage(\"bumbag\")>🎶</p>\
-  <p onclick=goToPage(\"page05\")>👉</p>"
+  "<div class=\"p03-arrow-left arrow\" onclick=goToPage(\"page04\")></div>\
+  <div class=\"bumbag-button\" onclick=goToPage(\"bumbag\")></div>\
+  <div class=\"p03-arrow-right arrow\" onclick=goToPage(\"page05\")></div>"
 ));
 
 // page04
@@ -53,8 +53,8 @@ pages.push( new Page(
   "images/comic/p06.jpg", 
   "images/comic/p07.jpg",
   "",
-  "<p onclick=goToPage(\"page07\")>👇</p>\
-  <p onclick=goToPage(\"page06\")>👆</p>"
+  "<div class=\"p04-arrow-down arrow\" onclick=goToPage(\"page07\")></div>\
+   <div class=\"p04-arrow-up arrow\" onclick=goToPage(\"page06\")></div>"
 ));
 
 // page05
@@ -63,8 +63,8 @@ pages.push( new Page(
   "images/comic/p12.jpg", 
   "images/comic/p13.jpg",
   "",
-  "<p onclick=goToPage(\"page08\")>👆</p>\
-  <p onclick=goToPage(\"page09\")>👇</p>"
+  "<div class=\"p05-arrow-down arrow\" onclick=goToPage(\"page09\")></div>\
+   <div class=\"p05-arrow-up arrow\" onclick=goToPage(\"page08\")></div>"
 ));
 
 // page06
@@ -73,7 +73,7 @@ pages.push( new Page(
   "images/comic/p08.jpg", 
   "images/comic/p09.jpg",
   "",
-  "<p onclick=goToPage(\"page10\")>👍</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>"
 ));
 
 // page07
@@ -82,7 +82,7 @@ pages.push( new Page(
   "images/comic/p10.jpg", 
   "images/comic/p11.jpg",
   "",
-  "<p onclick=goToPage(\"page10\")>👍</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>"
 ));
 
 // page08
@@ -91,7 +91,7 @@ pages.push( new Page(
   "images/comic/p14.jpg", 
   "images/comic/p15.jpg",
   "",
-  "<p onclick=goToPage(\"page10\")>👍</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>"
 ));
 
 // page09
@@ -100,16 +100,16 @@ pages.push( new Page(
   "images/comic/p16.jpg", 
   "images/comic/p17.jpg",
   "",
-  "<p onclick=goToPage(\"page10\")>👍</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>"
 ));
 
 // page10
 pages.push( new Page(
   "page10", 
-  "images/comic/p18.jpg", 
   "images/comic/p00dark.jpg",
+  "images/comic/p18.jpg", 
   "",
-  "<p onclick=goToPage(\"home\")>🏠</p>"
+  "<div class=\"panel-button\" onclick=goToPage(\"home\")></div>"
 ));
 
 // bumbag

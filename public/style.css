@@ -75,3 +75,62 @@ html, body{
 .inner-container{
   font-size: 12vh;
 }
+
+.arrow{
+  background-size: contain;
+  height: 15vh;
+  width: 15vh;
+  background-repeat: no-repeat;
+}
+
+.p02-arrow-down{
+  background-image: url('images/comic/arrow-down02.png');
+  position: relative;
+  top: 15vh;
+}
+
+.p03-arrow-left{
+  background-image: url('images/comic/arrow-left01.png');
+  /* position: relative; */
+  /* top: 15vh; */
+}
+
+.p03-arrow-right{
+  background-image: url('images/comic/arrow-right01.png');
+  position: relative;
+  top: 8vh;
+}
+
+.p04-arrow-up{
+  background-image: url('images/comic/arrow-up02.png');
+  position: relative;
+  top: -15vh;
+  right: -14vh;
+}
+
+.p04-arrow-down{
+  background-image: url('images/comic/arrow-down02.png');
+  position: relative;
+  top: 15vh;
+  left: -8vh;
+}
+
+.p05-arrow-up{
+  background-image: url('images/comic/arrow-up02.png');
+  position: relative;
+  top: -15vh;
+  right: 15vh;
+}
+
+.p05-arrow-down{
+  background-image: url('images/comic/arrow-down02.png');
+  position: relative;
+  top: 15vh;
+  left: 25vh;
+}
+
+.panel-button{
+  /* background-color: blue; */
+  width: var(--content-width);
+  height: var(--content-width);
+}
