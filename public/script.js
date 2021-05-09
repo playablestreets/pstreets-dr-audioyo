@@ -1,9 +1,9 @@
 var squareBehindTop = document.getElementById("square-top");
 var squareBehindBottom = document.getElementById("square-bottom");
-var foldDuration = '2s';
-var foldDelay = '2s';
+var foldDuration = '1.5s';
+var foldDelay = '1.5s';
 //this should be the total time for transitions to complete
-var destroyFlippersDelay = 4000;
+var destroyFlippersDelay = 2500;
 var currentPageTitle = "home"
 
 imagePreloader.preloadImages(startInteraction);
@@ -90,6 +90,7 @@ function foldFlippers(){
   flipperBottom.style.transitionDelay = foldDelay;
   flipperTop.style.transform = "rotateX(-90deg)";
   flipperBottom.style.transform = "rotateY(-90deg)";
+  // flipperBottom.style.opacity = "0.75";
 }
 
 function destroyElementsByClassName(className){

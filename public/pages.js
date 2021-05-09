@@ -14,8 +14,11 @@ pages.push( new Page(
   "home", 
   "images/home/home-top.jpg", 
   "images/home/home-bottom.jpg",
-  "<p onclick=goToPage(\"page01\")>👉</p>",
-  ""
+  "<div class=\"window03 window\")></div>\
+  <div class=\"window04 window\"></div>",
+  "<div class=\"window01 window\")></div>\
+  <div class=\"window02 window\"></div>\
+  <div class=\"door\" onclick=goToPage(\"page01\")></div>"
 ));
 
 // page01
