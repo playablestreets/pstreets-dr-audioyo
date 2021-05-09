@@ -52,10 +52,11 @@ html, body{
   height: var(--content-width);
   width: var(--content-width);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   perspective: 1000px;
   background-size: contain;
+  position: relative;
 }
 
 .square:first-child{
@@ -81,52 +82,55 @@ html, body{
   height: 15vh;
   width: 15vh;
   background-repeat: no-repeat;
+  position: absolute;
+  transition-duration: 0.5s;
 }
 
+.arrow:hover{
+  height: 17vh;
+  width: 17vh;
+}
 .p02-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  position: relative;
-  top: 15vh;
+  top: 30vh;
 }
 
 .p03-arrow-left{
   background-image: url('images/comic/arrow-left01.png');
   /* position: relative; */
-  /* top: 15vh; */
+  top: 15vh;
+  right: 25vh;
 }
 
 .p03-arrow-right{
   background-image: url('images/comic/arrow-right01.png');
-  position: relative;
-  top: 8vh;
+  /* position: relative; */
+  top: 25vh;
+  right: 5vh;
 }
 
 .p04-arrow-up{
   background-image: url('images/comic/arrow-up02.png');
-  position: relative;
-  top: -15vh;
-  right: -14vh;
+  top: 5vh;
+  right: -5vh;
 }
 
 .p04-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  position: relative;
-  top: 15vh;
-  left: -8vh;
+  top: 25vh;
+  right: 30vh;
 }
 
 .p05-arrow-up{
   background-image: url('images/comic/arrow-up02.png');
-  position: relative;
-  top: -15vh;
-  right: 15vh;
+  top: 5vh;
+  right: 25vh;
 }
 
 .p05-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  position: relative;
-  top: 15vh;
-  left: 25vh;
+  top: 25vh;
+  right: 0vh;
 }
 
 .panel-button{
