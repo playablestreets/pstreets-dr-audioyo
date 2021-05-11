@@ -4,6 +4,8 @@ var foldDuration = '1.5s';
 var foldDelay = '1.5s';
 //this should be the total time for transitions to complete
 var destroyFlippersDelay = 2500;
+var soundInTopDelay = 800;
+var soundInBottomDelay = 2100;
 var currentPageTitle = "home"
 
 imagePreloader.preloadImages(startInteraction);
@@ -21,10 +23,16 @@ function goToPage(nextPageTitle){
   var lastPage = getPageByTitle(currentPageTitle);
   var nextPage = getPageByTitle(nextPageTitle);
   
+  stopSounds();
+
+  playSound(lastPage.soundOut);
+
   overlayFlippers(lastPage);
   setSquaresToPage(nextPage);
   setTimeout(foldFlippers, 0);
   setTimeout( destroyFlippers, destroyFlippersDelay );
+  setTimeout( () => playSound(nextPage.soundInTop), soundInTopDelay);
+  setTimeout( () => playSound(nextPage.soundInBottom), soundInBottomDelay);
   currentPageTitle = nextPageTitle;
 }
 

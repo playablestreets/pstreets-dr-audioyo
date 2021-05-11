@@ -33,6 +33,8 @@ var imagePreloader = {
     that.numImagesLoaded++;
     if(that.numImagesLoaded == that.numImages){
       console.log('all images have loaded');
+      while(sounds.hasLoaded){};
+      console.log('all sounds have loaded!');
       setTimeout( () => {
         that.onAllLoaded();
       }, 2000);    }
