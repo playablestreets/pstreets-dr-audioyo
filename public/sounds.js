@@ -1,4 +1,4 @@
-const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
+// const player = new Tone.Player("https://tonejs.github.io/audio/berklee/gong_1.mp3").toDestination();
 
 class Sound{
   constructor(title, url){
@@ -67,7 +67,7 @@ sounds.forEach(s =>{
 })
 
 Tone.loaded().then(() => {
-	player.start();
+	// player.start();
   // sounds[0].play();
   // playSound("horn");
   sounds.hasLoaded = true;
