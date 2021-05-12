@@ -68,9 +68,9 @@ function overlayFlippers(page){
   var flipperBottom = document.getElementById("flipper-bottom");
   //set front squares with current pages
   flipperTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
-  flipperTop.style.innerHTML = "url('" + page.topInnerHTML + "')";
+  // flipperTop.style.innerHTML = "url('" + page.topInnerHTML + "')";
   flipperBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
-  flipperBottom.style.innerHTML = "url('" + page.bottomInnerHTML + "')";
+  // flipperBottom.style.innerHTML = "url('" + page.bottomInnerHTML + "')";
 
 
 }
