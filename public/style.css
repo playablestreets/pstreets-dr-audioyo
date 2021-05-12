@@ -71,7 +71,7 @@ html, body{
   position: absolute;
   width: calc(var(--app-height)/2);
   backface-visibility: hidden;
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .inner-container{

@@ -68,7 +68,11 @@ function overlayFlippers(page){
   var flipperBottom = document.getElementById("flipper-bottom");
   //set front squares with current pages
   flipperTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
+  flipperTop.style.innerHTML = "url('" + page.topInnerHTML + "')";
   flipperBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
+  flipperBottom.style.innerHTML = "url('" + page.bottomInnerHTML + "')";
+
+
 }
 
 function createFlippers(){
@@ -97,8 +101,9 @@ function foldFlippers(){
   flipperBottom.style.transitionDuration = foldDuration;
   flipperBottom.style.transitionDelay = foldDelay;
   flipperTop.style.transform = "rotateX(-90deg)";
+  flipperTop.style.opacity = "0";
   flipperBottom.style.transform = "rotateY(-90deg)";
-  // flipperBottom.style.opacity = "0.75";
+  flipperBottom.style.opacity = "0";
 }
 
 function destroyElementsByClassName(className){
