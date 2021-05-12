@@ -3,6 +3,7 @@
   --content-margin: 10px;
   --content-height: calc(100vh - 2* var(--content-margin));
   --content-width: calc(var(--content-height)/ 2);
+  --app-height: 100vh;
   overflow: hidden;
 }
 
@@ -18,7 +19,7 @@ html, body{
 
 .loading-screen{
   width: 100vw;
-  height:100vh;
+  height:var(--app-height);
   background-color: var(--bg-color);
   display: flex;
   justify-content: center;
@@ -38,19 +39,19 @@ html, body{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh;
+  height: var(--app-height);
 }
 
 
 .content{
-  width: var(--content-width);
-  height: var(--content-height);
+  width: calc(var(--app-height)/2);
+  height: var(--app-height);
   background-size: contain;
 }
 
 .square{
-  height: var(--content-width);
-  width: var(--content-width);
+  height: calc(var(--app-height)/2);
+  width: calc(var(--app-height)/2);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -68,7 +69,7 @@ html, body{
 
 .flipper{
   position: absolute;
-  width: var(--content-width);
+  width: calc(var(--app-height)/2);
   backface-visibility: hidden;
   z-index: 2;
 }
@@ -79,124 +80,124 @@ html, body{
 
 .arrow{
   background-size: contain;
-  height: 15vh;
-  width: 15vh;
+  height:calc( 15*var(--ah));
+  width:calc( 15*var(--ah));
   background-repeat: no-repeat;
   position: absolute;
   transition-duration: 0.5s;
 }
 
 .arrow:hover{
-  height: 17vh;
-  width: 17vh;
+  height:calc( 17*var(--ah));
+  width:calc( 17*var(--ah));
 }
 .p02-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  top: 30vh;
+  top:calc( 30*var(--ah));
 }
 
 .p03-arrow-left{
   background-image: url('images/comic/arrow-left01.png');
   /* position: relative; */
-  top: 15vh;
-  right: 25vh;
+  top:calc( 15*var(--ah));
+  right:calc( 25*var(--ah));
 }
 
 .p03-arrow-right{
   background-image: url('images/comic/arrow-right01.png');
   /* position: relative; */
-  top: 25vh;
-  right: 5vh;
+  top:calc( 25*var(--ah));
+  right:calc( 5*var(--ah));
 }
 
 .p04-arrow-up{
   background-image: url('images/comic/arrow-up02.png');
-  top: 5vh;
-  right: -5vh;
+  top:calc( 5*var(--ah));
+  right:calc( -5*var(--ah));
 }
 
 .p04-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  top: 25vh;
-  right: 30vh;
+  top:calc( 25*var(--ah));
+  right:calc( 30*var(--ah));
 }
 
 .p05-arrow-up{
   background-image: url('images/comic/arrow-up02.png');
-  top: 5vh;
-  right: 25vh;
+  top:calc( 5*var(--ah));
+  right:calc( 25*var(--ah));
 }
 
 .p05-arrow-down{
   background-image: url('images/comic/arrow-down02.png');
-  top: 25vh;
-  right: 0vh;
+  top:calc( 25*var(--ah));
+  right:calc( 0*var(--ah));
 }
 
 .panel-button{
   /* background-color: blue; */
-  width: var(--content-width);
-  height: var(--content-width);
+  width: calc(var(--app-height)/2);
+  height: calc(var(--app-height)/2);
 }
 
 .bumbag-button{
   /* background-color: red; */
-  width: 5vh;
-  height: 5vh;
-  top:  10vh;
-  right: 15vh;
+  width:calc( 5*var(--ah));
+  height:calc( 5*var(--ah));
+  top:calc(  10*var(--ah));
+  right:calc( 15*var(--ah));
   position: absolute;
 }
 
 .window{
   background-size: contain;
-  height: 7vh;
-  width: 7vh;
+  height:calc( 7*var(--ah));
+  width:calc( 7*var(--ah));
   background-repeat: no-repeat;
   position: absolute;
   transition-duration: 0.5s;
 }
 
 .window:hover{
-  height: 7.5vh;
+  height:calc( 7.5*var(--ah));
 }
 
 .window01{
   background-image: url('images/home/window01.png');
-  top: 13.3vh;
-  right: 27vh;
+  top:calc( 14*var(--ah));
+  right:calc( 28*var(--ah));
 }
 
 .window02{
   background-image: url('images/home/window02.png');
-  top: -1vh;
-  right: 12.5vh;
+  top:calc( -0.8*var(--ah));
+  right:calc( 13*var(--ah));
 }
 
 .window03{
   background-image: url('images/home/window01.png');
-  top: 39.5vh;
-  right: 19.5vh;
+  top:calc( 40.8*var(--ah));
+  right:calc( 20.5*var(--ah));
 }
 
 .window04{
   background-image: url('images/home/window04.png');
-  top: 24.7vh;
-  right: 27vh;
+  top:calc( 25.7*var(--ah));
+  right:calc( 28*var(--ah));
 }
 
 .door{
   background-image: url('images/home/door.png');
   background-size: contain;
-  height: 8.5vh;
-  width: 8.5vh;
-  top:26vh;
-  right: 18.4vh;
+  height: calc( 8.5 * var(--ah));
+  width: calc(8.5 * var(--ah));
+  top:calc(27 * var(--ah));
+  right: calc(19.2 * var(--ah));
   background-repeat: no-repeat;
   position: absolute;
   transition-duration: 0.5s;
 }
 
 .door:hover{
-  height: 9vh;
+  height:calc( 9*var(--ah));
 }
