@@ -228,14 +228,7 @@ html, body{
   height: calc(var(--app-height)/2);
 }
 
-.bumbag-button{
-  /* background-color: red; */
-  width:calc( 5*var(--ah));
-  height:calc( 5*var(--ah));
-  top:calc(  10*var(--ah));
-  right:calc( 15*var(--ah));
-  position: absolute;
-}
+
 
 .window{
   background-size: contain;
@@ -288,4 +281,96 @@ html, body{
 
 .door:hover{
   height:calc( 9*var(--ah));
+}
+
+.bumbag-item{
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: calc(var(--app-height));
+  width: calc(var(--app-height)/2);
+  position: absolute;
+  /* top: 0; */
+  z-index: 100;
+}
+
+.bumbag-clickable{
+  transition-duration: 0.2s;
+  transform: scale(1);
+}
+
+.bumbag-clickable:hover{
+  transform: scale(1.1);
+}
+
+
+.bumbag-back{
+  width:calc( 15*var(--ah));
+  height:calc( 15*var(--ah));
+  left:calc( 35*var(--ah));
+}
+
+
+.bumbag-buttons{
+  height:calc( 8*var(--ah));
+  width:calc( 20*var(--ah));
+  top: calc( 38*var(--ah));
+  left: calc( 20*var(--ah));
+}
+
+.bumbag{
+  pointer-events: none;
+}
+
+.bumbag-title{
+  pointer-events: none;
+  height:calc( 30*var(--ah));
+  width:calc( 30*var(--ah));
+  top: calc( 2*var(--ah));
+  left: calc( 2*var(--ah));
+}
+
+.bumbag-instrument{
+  height:calc( 15*var(--ah));
+  width:calc( 15*var(--ah));
+}
+
+#bumbag-bass{
+  top: calc( 80*var(--ah));
+  left: calc( 10*var(--ah));
+  height:calc( 20*var(--ah));
+  width:calc( 20*var(--ah));
+}
+
+#bumbag-cats{
+  top: calc( 86*var(--ah));
+  left: calc( 33*var(--ah));
+}
+
+#bumbag-drums{
+  top: calc( 55*var(--ah));
+  left: calc( 33*var(--ah));
+}
+
+#bumbag-guitar{
+  top: calc( 75*var(--ah));
+  left: calc( 5*var(--ah));
+  height:calc( 10*var(--ah));
+  width:calc( 15*var(--ah));
+}
+
+#bumbag-lips{
+  top: calc( 55*var(--ah));
+  left: calc( 6*var(--ah));
+}
+
+#bumbag-record{
+  top: calc( 67*var(--ah));
+  left: calc( 20*var(--ah));
+  height:calc( 9*var(--ah));
+}
+
+#bumbag-trumpet{
+  top: calc( 75*var(--ah));
+  left: calc( 33*var(--ah));
+  height:calc( 10*var(--ah));
 }
