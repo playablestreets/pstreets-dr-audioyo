@@ -98,6 +98,8 @@ html, body{
   left: calc( var(--app-height) * 0.3 );
   animation: drive 20s linear 0s infinite forwards;
   transform-origin: center;
+  pointer-events: all;
+  z-index: 2;
 }
 
 @keyframes drive {

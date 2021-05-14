@@ -34,7 +34,7 @@ home.rectangleInnerHTML = "<div class=\"rectangle-bg\" style=\"background-image:
 <div class=\"rectangle-bg title-giant\" style=\"background-image:url(\'images/home/giant.png\')\"></div>\
 <div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-front.jpg\')\"></div>\
 <div class=\"rectangle-bg title-smoke\" style=\"background-image:url(\'images/home/title-smoke.jpg\')\"></div>\
-<div class=\"rectangle-bg title-bus\" style=\"background-image:url(\'images/home/bus.png\')\"></div>";
+<div class=\"rectangle-bg title-bus\" onclick=playSound(\"bus\") style=\"background-image:url(\'images/home/bus.png\')\"></div>";
 pages.push( home );
 
 // page01
