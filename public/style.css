@@ -50,6 +50,7 @@ html, body{
   height: var(--app-height);
   background-size: contain;
   z-index: 0;
+  overflow: hidden;
   /* position: absolute; */
 }
 
@@ -76,7 +77,7 @@ html, body{
 
 .title-giant{
   height: calc(var(--app-height) * 0.5);
-  position: absolute;
+  position: relative;
   top:calc(var(--app-height) * 0.55);
   animation: bobbing 20s ease-in-out 5s infinite alternate;
 }
@@ -88,8 +89,42 @@ html, body{
   to {
     top:calc(var(--app-height) * 0.3);
   }
+}
 
-  
+.title-bus{
+  height: calc( var(--app-height) * 0.1 );
+  top: calc( var(--app-height) * 0.9 );
+  /* position: relative; */
+  left: calc( var(--app-height) * 0.3 );
+  animation: drive 20s linear 0s infinite forwards;
+  transform-origin: center;
+}
+
+@keyframes drive {
+  from { 
+    transform: scaleX(1);
+    left: calc( var(--app-height) * 0.3 ); 
+  }
+  49% { 
+    transform: scaleX(1);
+    left: calc( var(--app-height) * 0.0); 
+  }
+  50%{ 
+    transform: scaleX(-1);
+    left: calc( var(--app-height) * -0.3);
+  }
+  51%{ 
+    transform: scaleX(-1);
+    left: calc( var(--app-height) * -0.3); 
+  }
+  99% { 
+    left: calc( var(--app-height) * 0.0 );
+    transform: scaleX(-1);
+  }
+  to { 
+    left: calc( var(--app-height) * 0.3 );
+    transform: scaleX(1);
+   }
 }
 
 .square{
