@@ -37,8 +37,11 @@ function goToPage(nextPageTitle, silent = false){
   setSquaresToPage(nextPage);
   setTimeout(foldFlippers, 0);
   setTimeout( destroyFlippers, destroyFlippersDelay );
-  setTimeout( () => playSound(nextPage.soundInTop), soundInTopDelay);
-  setTimeout( () => playSound(nextPage.soundInBottom), soundInBottomDelay);
+
+  if(!silent){
+    setTimeout( () => playSound(nextPage.soundInTop), soundInTopDelay);
+    setTimeout( () => playSound(nextPage.soundInBottom), soundInBottomDelay);
+  }
   currentPageTitle = nextPageTitle;
 }
 

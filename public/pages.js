@@ -87,7 +87,7 @@ pages.push( new Page(
   "images/comic/p08.jpg", 
   "images/comic/p09.jpg",
   "",
-  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "edge", "jump", ""
 ));
 
@@ -97,7 +97,7 @@ pages.push( new Page(
   "images/comic/p10.jpg", 
   "images/comic/p11.jpg",
   "",
-  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "smash", "laugh", ""
 ));
 
@@ -107,7 +107,7 @@ pages.push( new Page(
   "images/comic/p14.jpg", 
   "images/comic/p15.jpg",
   "",
-  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "purr", "cat", ""
 ));
 
@@ -117,15 +117,15 @@ pages.push( new Page(
   "images/comic/p16.jpg", 
   "images/comic/p17.jpg",
   "",
-  "<div class=\"panel-button\" onclick=goToPage(\"page10\")></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "fall", "splat", ""
 ));
 
-// page10
+// credits
 pages.push( new Page(
-  "page10", 
-  "images/comic/p00dark.jpg",
-  "images/comic/p18.jpg", 
+  "credits", 
+  "images/comic/credits-top.jpg",
+  "images/comic/credits-bottom.jpg", 
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"home\")></div>",
   "", "", ""
