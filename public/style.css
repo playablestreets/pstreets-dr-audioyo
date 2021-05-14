@@ -1,5 +1,5 @@
 :root{
-  --bg-color: #1b1b3a;
+  --bg-color: #0e0e0e;
   --content-margin: 10px;
   --content-height: calc(100vh - 2* var(--content-margin));
   --content-width: calc(var(--content-height)/ 2);
@@ -28,7 +28,7 @@ html, body{
   color: whitesmoke;
   transition-duration: 2s;
   position: absolute;
-  z-index: 10;
+  z-index: 999;
   top: 0;
   left: 0;
 }
@@ -40,6 +40,8 @@ html, body{
   justify-content: space-around;
   align-items: center;
   height: var(--app-height);
+  /* background-image: url('images/home/background.jpg'); */
+  /* background-size: cover; */
 }
 
 
@@ -47,6 +49,47 @@ html, body{
   width: calc(var(--app-height)/2);
   height: var(--app-height);
   background-size: contain;
+  z-index: 0;
+  /* position: absolute; */
+}
+
+.rectangle{
+  position: absolute;
+  top: 0;
+}
+
+.rectangle-bg{
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: calc(var(--app-height));
+  width: calc(var(--app-height)/2);
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  /* z-index: 20; */
+  z-index: 0;
+}
+
+.title-smoke{
+  z-index: 20;
+}
+
+.title-giant{
+  height: calc(var(--app-height) * 0.5);
+  position: absolute;
+  top:calc(var(--app-height) * 0.55);
+  animation: bobbing 20s ease-in-out 5s infinite alternate;
+}
+
+@keyframes bobbing {
+  from {
+    top:calc(var(--app-height) * 0.55);
+  }
+  to {
+    top:calc(var(--app-height) * 0.3);
+  }
+
+  
 }
 
 .square{
@@ -57,21 +100,29 @@ html, body{
   align-items: center;
   perspective: 1000px;
   background-size: contain;
-  position: relative;
+  /* position: absolute; */
+  z-index: 100;
 }
 
 .square:first-child{
   background-position: center bottom;
+  /* top: 0; */
 }
 .square:last-child{
   background-position: center top;
+  /* top: calc(var(--app-height)*0.5); */
+}
+
+.square > *{
+ z-index: 100;
+ position: relative;
 }
 
 .flipper{
   position: absolute;
   width: calc(var(--app-height)/2);
   backface-visibility: hidden;
-  z-index: 3;
+  z-index: 998;
 }
 
 .inner-container{

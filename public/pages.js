@@ -8,12 +8,14 @@ class Page{
     this.soundInTop = soundInTop;
     this.soundInBottom = soundInBottom;
     this.soundOut = soundOut;
+    this.rectangleInnerHTML = "";
+    this.hideSquareBackgrounds = false;
   }
 }
 
 const pages = [];
 // home
-pages.push( new Page(
+const home = new Page(
   "home", 
   "images/home/home-top.jpg", 
   "images/home/home-bottom.jpg",
@@ -25,11 +27,19 @@ pages.push( new Page(
   "",
   "",
   ""
-));
+)
+
+home.hideSquareBackgrounds = true;
+home.rectangleInnerHTML = "<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-back.jpg\')\"></div>\<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/pavement.jpg\')\"></div>\
+<div class=\"rectangle-bg title-giant\" style=\"background-image:url(\'images/home/giant.png\')\"></div>\
+<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-front.jpg\')\"></div>\
+<div class=\"rectangle-bg title-smoke\" style=\"background-image:url(\'images/home/title-smoke.jpg\')\"></div>";
+pages.push( home );
 
 // page01
 pages.push( new Page(
   "page01", 
+  // "images/comic/p00title.jpg", 
   "images/comic/p00light.jpg", 
   "images/comic/p01.jpg",
   "",

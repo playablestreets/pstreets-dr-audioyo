@@ -33,8 +33,10 @@ function goToPage(nextPageTitle, silent = false){
     stopSounds();
     playSound(lastPage.soundOut);
   }
+
   overlayFlippers(lastPage);
   setSquaresToPage(nextPage);
+
   setTimeout(foldFlippers, 0);
   setTimeout( destroyFlippers, destroyFlippersDelay );
 
@@ -48,11 +50,19 @@ function goToPage(nextPageTitle, silent = false){
 function setSquaresToPage(page){
   setSquaresBackgroundImages(page);
   setSquaresInnerHTML(page);
+  setRectangleInnerHTML(page);
 }
 
 function setSquaresBackgroundImages(page){
-  squareBehindTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
-  squareBehindBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
+  if(page.hideSquareBackgrounds){
+    squareBehindTop.style.backgroundImage = "";
+    squareBehindBottom.style.backgroundImage = "";
+  
+  }else{
+    squareBehindTop.style.backgroundImage = "url('" + page.topImageSrc + "')";
+    squareBehindBottom.style.backgroundImage = "url('" + page.bottomImageSrc + "')";
+  
+  }
 }
 
 function setSquaresInnerHTML(page){
@@ -70,6 +80,13 @@ function setSquaresInnerHTML(page){
   squareInnerContainer.innerHTML = page.bottomInnerHTML;
   squareBehindBottom.appendChild(squareInnerContainer);
 }
+
+function setRectangleInnerHTML(page){
+  var innerHTML = page.rectangleInnerHTML;
+  var rectangle = document.getElementById("rectangle");
+  rectangle.innerHTML = innerHTML;
+};
+
 
 function overlayFlippers(page){
   createFlippers();
