@@ -19,14 +19,20 @@ function startInteraction(){
   }, 3000);
 }
 
-function goToPage(nextPageTitle){
+function goToTheRoom(){
+  stopSounds();
+  playSound("dj");
+  goToPage("page03", true);
+}
+
+function goToPage(nextPageTitle, silent = false){
   var lastPage = getPageByTitle(currentPageTitle);
   var nextPage = getPageByTitle(nextPageTitle);
   
-  stopSounds();
-
-  playSound(lastPage.soundOut);
-
+  if(!silent){
+    stopSounds();
+    playSound(lastPage.soundOut);
+  }
   overlayFlippers(lastPage);
   setSquaresToPage(nextPage);
   setTimeout(foldFlippers, 0);

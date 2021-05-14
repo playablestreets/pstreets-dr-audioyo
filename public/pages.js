@@ -18,7 +18,7 @@ pages.push( new Page(
   "images/home/home-top.jpg", 
   "images/home/home-bottom.jpg",
   "<div class=\"window03 window\" onclick=playSound(\"trumpet\")></div>\
-  <div class=\"window04 window\" onclick=playSound(\"dj\")></div>",
+  <div class=\"window04 window\" onclick=goToTheRoom()></div>",
   "<div class=\"window01 window\" onclick=playSound(\"singer\")></div>\
   <div class=\"window02 window\" onclick=playSound(\"guitar\")></div>\
   <div class=\"door\" onclick=goToPage(\"page01\")></div>",
