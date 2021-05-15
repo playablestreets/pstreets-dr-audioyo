@@ -93,13 +93,29 @@ html, body{
 
 .title-bus{
   height: calc( var(--app-height) * 0.1 );
+  width: calc( var(--app-height) * 0.2 );
   top: calc( var(--app-height) * 0.9 );
   /* position: relative; */
   left: calc( var(--app-height) * 0.3 );
+  /* animation: wobble 0.5s ease-in-out 0s infinite forwards, drive 20s linear 0s infinite forwards; */
   animation: drive 20s linear 0s infinite forwards;
   transform-origin: center;
   pointer-events: all;
   z-index: 2;
+  transition-duration: 0.2s;
+}
+
+.title-bus:hover{
+  height: calc( var(--app-height) * 0.2 );
+}
+
+@keyframes wobble {
+  from {
+    transform: scaleY(0.95);
+  }
+  to {
+    transform: scaleY(1.05);
+  }
 }
 
 @keyframes drive {
@@ -113,14 +129,14 @@ html, body{
   }
   50%{ 
     transform: scaleX(-1);
-    left: calc( var(--app-height) * -0.3);
+    left: calc( var(--app-height) * 0);
   }
   51%{ 
     transform: scaleX(-1);
-    left: calc( var(--app-height) * -0.3); 
+    left: calc( var(--app-height) * 0); 
   }
   99% { 
-    left: calc( var(--app-height) * 0.0 );
+    left: calc( var(--app-height) * 0.3 );
     transform: scaleX(-1);
   }
   to { 
@@ -309,16 +325,37 @@ html, body{
   left:calc( 35*var(--ah));
 }
 
+.bumbag-panel-button{
+  height:calc( 8*var(--ah));
+  width:calc( 10*var(--ah));
+  position: relative;
+  top: calc( -12 * var(--ah));
+  right: calc( -8 * var(--ah));
+  /* background-color: red; */
+}
 
 .bumbag-buttons{
   height:calc( 8*var(--ah));
   width:calc( 20*var(--ah));
   top: calc( 38*var(--ah));
   left: calc( 20*var(--ah));
+  animation: bumbag-dance 0.4s steps(3) infinite alternate-reverse;
+  transform-origin: bottom;
 }
 
 .bumbag{
   pointer-events: none;
+  animation: bumbag-dance 0.4s steps(3) infinite alternate;
+  height: calc(var(--app-height) * 0.6);
+}
+
+@keyframes bumbag-dance {
+  from {
+    transform: rotateZ(-3deg);
+  }
+  to {
+    transform: rotateZ(3deg);
+  }
 }
 
 .bumbag-title{

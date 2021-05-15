@@ -8,22 +8,56 @@ class Sound{
   play(){
     this.sound.start();
   }
+  makeLooping(){
+    this.sound.loop = true;
+  }
 }
 
+function getSoundById(title){
+  return sounds.filter(s => {
+    return s.title === title;
+  })[0];
+}
+
+function getSoundLoops(){
+  return sounds.filter(s => {
+    return s.sound.loop === true;
+  });
+}
+
+
 function playSound(title){
-    // stopSounds();
-
-    const foundSound = sounds.filter(s => {
-      return s.title === title;
-    })[0];
-
+    const foundSound = getSoundById(title);
+    
     if(foundSound){
       foundSound.play();
     }
+  }
+  
+  function stopSounds(){
+    sounds.forEach( s => {
+      s.sound.stop();
+    });
+  }
+  
+function stopSound(title){
+  const foundSound = getSoundById(title);
+  if(foundSound){
+    foundSound.sound.stop();
+  }
 }
 
-function stopSounds(){
-  sounds.forEach( s => {
+function startLoops(){
+  const loops = getSoundLoops();
+  loops.forEach( s => {
+    s.sound.start();
+    // s.sound.mute = true;
+  });
+}
+
+function stopLoops(){
+  const loops = getSoundLoops();
+  loops.forEach( s => {
     s.sound.stop();
   });
 }
@@ -60,6 +94,34 @@ sounds.push(new Sound("cat", "audio/cat.mp3"));
 sounds.push(new Sound("fall", "audio/fall.mp3"));
 sounds.push(new Sound("splat", "audio/splat.mp3"));
 
+
+const bumbagMeow = new Sound("bumbagMeow", "audio/bumbag/meow.mp3");
+bumbagMeow.makeLooping();
+sounds.push(bumbagMeow);
+
+const bumbagBass = new Sound("bumbagBass", "audio/bumbag/bass.mp3");
+bumbagBass.makeLooping();
+sounds.push(bumbagBass);
+
+const bumbagBeatbox = new Sound("bumbagBeatbox", "audio/bumbag/beatbox.mp3");
+bumbagBeatbox.makeLooping();
+sounds.push(bumbagBeatbox);
+
+const bumbagDrums = new Sound("bumbagDrums", "audio/bumbag/drums.mp3");
+bumbagDrums.makeLooping();
+sounds.push(bumbagDrums);
+
+const bumbagGuitar = new Sound("bumbagGuitar", "audio/bumbag/guitar.mp3");
+bumbagGuitar.makeLooping();
+sounds.push(bumbagGuitar);
+
+const bumbagTrumpet = new Sound("bumbagTrumpet", "audio/bumbag/trumpet.mp3");
+bumbagTrumpet.makeLooping();
+sounds.push(bumbagTrumpet);
+
+const bumbagLips = new Sound("bumbagLips", "audio/bumbag/lips.mp3");
+bumbagLips.makeLooping();
+sounds.push(bumbagLips);
 
 
 sounds.forEach(s =>{

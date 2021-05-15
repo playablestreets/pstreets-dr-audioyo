@@ -65,7 +65,7 @@ pages.push( new Page(
   "images/comic/p05.jpg",
   "",
   "<div class=\"p03-arrow-left arrow\" onclick=goToPage(\"page04\")></div>\
-  <div class=\"bumbag-button\" onclick=goToPage(\"bumbag\")></div>\
+  <div class=\"bumbag-panel-button\" onclick=goToBumbag()></div>\
   <div class=\"p03-arrow-right arrow\" onclick=goToPage(\"page05\")></div>",
   "clack", "hmm", ""
 ));

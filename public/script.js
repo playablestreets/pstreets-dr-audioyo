@@ -25,6 +25,13 @@ function goToTheRoom(){
   goToPage("page03", true);
 }
 
+function goToBumbag(){
+  stopSounds();
+  goToPage("bumbag", true);
+  startLoops();
+}
+
+
 function goToPage(nextPageTitle, silent = false){
   var lastPage = getPageByTitle(currentPageTitle);
   var nextPage = getPageByTitle(nextPageTitle);
