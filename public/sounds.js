@@ -51,7 +51,7 @@ function startLoops(){
   const loops = getSoundLoops();
   loops.forEach( s => {
     s.sound.start();
-    // s.sound.mute = true;
+    s.sound.mute = true;
   });
 }
 
@@ -61,6 +61,9 @@ function stopLoops(){
     s.sound.stop();
   });
 }
+
+
+
 
 const sounds = [];
 sounds.hasLoaded = false;
@@ -95,31 +98,73 @@ sounds.push(new Sound("fall", "audio/fall.mp3"));
 sounds.push(new Sound("splat", "audio/splat.mp3"));
 
 
-const bumbagMeow = new Sound("bumbagMeow", "audio/bumbag/meow.mp3");
+function toggleLoopMute(id){
+  const thisLoop = getSoundById(id);
+  const isMuted = thisLoop.sound.mute;
+  const bumbagIcon = document.getElementById(id);
+  
+  if(isMuted){
+    bumbagIcon.style.animation = "bumbag-dance 0.4s steps(3) infinite alternate-reverse";
+    bumbagIcon.style.filter = "brightness(100%)";
+    thisLoop.sound.mute = false;
+  }
+  else{
+    bumbagIcon.style.filter = "brightness(70%)";
+    bumbagIcon.style.animation = "";
+    thisLoop.sound.mute = true;
+  }
+  
+  setBumbagAnimation();
+}
+
+function setBumbagAnimation(){
+  let bumbag = document.getElementById("bumbag");
+  let bumbagButtons = document.getElementById("bumbag-buttons");
+  if(isAnyLoopUnmuted()){
+    bumbagButtons.style.animation = "bumbag-dance 0.4s steps(3) infinite alternate-reverse";
+    bumbag.style.animation = "bumbag-dance 0.3s steps(3) infinite alternate";
+  }else{
+    bumbagButtons.style.animation = "";
+    bumbag.style.animation = "";
+  }
+}
+
+function isAnyLoopUnmuted(){
+  const loops = getSoundLoops();
+  var isAnyLoopUnmuted = false;
+  loops.forEach( s => {
+    if(!s.sound.mute)
+     isAnyLoopUnmuted = true;
+  });
+  return isAnyLoopUnmuted;
+}
+
+
+const bumbagMeow = new Sound("bumbag-cats", "audio/bumbag/meow.mp3");
 bumbagMeow.makeLooping();
 sounds.push(bumbagMeow);
 
-const bumbagBass = new Sound("bumbagBass", "audio/bumbag/bass.mp3");
+const bumbagBass = new Sound("bumbag-bass", "audio/bumbag/bass.mp3");
 bumbagBass.makeLooping();
 sounds.push(bumbagBass);
 
-const bumbagBeatbox = new Sound("bumbagBeatbox", "audio/bumbag/beatbox.mp3");
+const bumbagBeatbox = new Sound("bumbag-record", "audio/bumbag/beatbox.mp3");
 bumbagBeatbox.makeLooping();
 sounds.push(bumbagBeatbox);
 
-const bumbagDrums = new Sound("bumbagDrums", "audio/bumbag/drums.mp3");
+const bumbagDrums = new Sound("bumbag-drums", "audio/bumbag/drums.mp3");
 bumbagDrums.makeLooping();
 sounds.push(bumbagDrums);
 
-const bumbagGuitar = new Sound("bumbagGuitar", "audio/bumbag/guitar.mp3");
+const bumbagGuitar = new Sound("bumbag-guitar", "audio/bumbag/guitar.mp3");
 bumbagGuitar.makeLooping();
 sounds.push(bumbagGuitar);
 
-const bumbagTrumpet = new Sound("bumbagTrumpet", "audio/bumbag/trumpet.mp3");
+const bumbagTrumpet = new Sound("bumbag-trumpet", "audio/bumbag/trumpet.mp3");
 bumbagTrumpet.makeLooping();
 sounds.push(bumbagTrumpet);
 
-const bumbagLips = new Sound("bumbagLips", "audio/bumbag/lips.mp3");
+const bumbagLips = new Sound("bumbag-lips", "audio/bumbag/lips.mp3");
 bumbagLips.makeLooping();
 sounds.push(bumbagLips);
 

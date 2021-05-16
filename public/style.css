@@ -339,13 +339,13 @@ html, body{
   width:calc( 20*var(--ah));
   top: calc( 38*var(--ah));
   left: calc( 20*var(--ah));
-  animation: bumbag-dance 0.4s steps(3) infinite alternate-reverse;
+  /* animation: bumbag-dance 0.4s steps(3) infinite alternate-reverse; */
   transform-origin: bottom;
 }
 
 .bumbag{
   pointer-events: none;
-  animation: bumbag-dance 0.4s steps(3) infinite alternate;
+  /* animation: bumbag-dance 0.4s steps(3) infinite alternate; */
   height: calc(var(--app-height) * 0.6);
 }
 
@@ -369,6 +369,7 @@ html, body{
 .bumbag-instrument{
   height:calc( 15*var(--ah));
   width:calc( 15*var(--ah));
+  filter: brightness(70%);
 }
 
 #bumbag-bass{

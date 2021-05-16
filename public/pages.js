@@ -156,15 +156,15 @@ bumbag.hideSquareBackgrounds = true;
 bumbag.rectangleInnerHTML = "\
 <div class=\"bumbag-item\" style=\"background-image:url(\'images/bumbag/background.jpg\')\"></div>\
 <div class=\"bumbag-item bumbag-clickable bumbag-back\" onclick=goToPage(\"page03\") style=\"background-image:url(\'images/bumbag/back.png\')\"></div>\
-<div class=\"bumbag-item bumbag\" style=\"background-image:url(\'images/bumbag/bumbag.png\')\"></div>\
-<div class=\"bumbag-item bumbag-buttons\" style=\"background-image:url(\'images/bumbag/buttons.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-bass\" style=\"background-image:url(\'images/bumbag/bass.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-cats\" style=\"background-image:url(\'images/bumbag/cats.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-drums\" style=\"background-image:url(\'images/bumbag/drums.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-guitar\" style=\"background-image:url(\'images/bumbag/guitar.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-lips\" style=\"background-image:url(\'images/bumbag/lips.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-record\" style=\"background-image:url(\'images/bumbag/record.png\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-trumpet\" style=\"background-image:url(\'images/bumbag/trumpet.png\')\"></div>\
+<div class=\"bumbag-item bumbag\" id=\"bumbag\" style=\"background-image:url(\'images/bumbag/bumbag.png\')\"></div>\
+<div class=\"bumbag-item bumbag-buttons\" id=\"bumbag-buttons\" style=\"background-image:url(\'images/bumbag/buttons.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-bass\" onClick=toggleLoopMute(\"bumbag-bass\") style=\"background-image:url(\'images/bumbag/bass.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-cats\" onClick=toggleLoopMute(\"bumbag-cats\") style=\"background-image:url(\'images/bumbag/cats.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-drums\" onClick=toggleLoopMute(\"bumbag-drums\") style=\"background-image:url(\'images/bumbag/drums.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-guitar\" onClick=toggleLoopMute(\"bumbag-guitar\") style=\"background-image:url(\'images/bumbag/guitar.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-lips\" onClick=toggleLoopMute(\"bumbag-lips\") style=\"background-image:url(\'images/bumbag/lips.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-record\" onClick=toggleLoopMute(\"bumbag-record\") style=\"background-image:url(\'images/bumbag/record.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-trumpet\" onClick=toggleLoopMute(\"bumbag-trumpet\") style=\"background-image:url(\'images/bumbag/trumpet.png\')\"></div>\
 <div class=\"bumbag-item bumbag-title\" style=\"background-image:url(\'images/bumbag/title.png\')\"></div>";
 
 pages.push(bumbag);
