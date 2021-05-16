@@ -17,8 +17,8 @@ const pages = [];
 // home
 const home = new Page(
   "home", 
-  "images/home/home-top.jpg", 
-  "images/home/home-bottom.jpg",
+  "images/home/home-top.png", 
+  "images/home/home-bottom.png",
   "<div class=\"window03 window\" onclick=playSound(\"trumpet\")></div>\
   <div class=\"window04 window\" onclick=goToTheRoom()></div>",
   "<div class=\"window01 window\" onclick=playSound(\"singer\")></div>\
@@ -30,10 +30,10 @@ const home = new Page(
 )
 
 home.hideSquareBackgrounds = true;
-home.rectangleInnerHTML = "<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-back.jpg\')\"></div>\<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/pavement.jpg\')\"></div>\
+home.rectangleInnerHTML = "<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-back.png\')\"></div>\
 <div class=\"rectangle-bg title-giant\" style=\"background-image:url(\'images/home/giant.png\')\"></div>\
-<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-front.jpg\')\"></div>\
-<div class=\"rectangle-bg title-smoke\" style=\"background-image:url(\'images/home/title-smoke.jpg\')\"></div>\
+<div class=\"rectangle-bg\" style=\"background-image:url(\'images/home/home-front.png\')\"></div>\
+<div class=\"rectangle-bg title-smoke\" style=\"background-image:url(\'images/home/title-smoke.png\')\"></div>\
 <div class=\"rectangle-bg title-bus\" onclick=playSound(\"bus\") style=\"background-image:url(\'images/home/bus.png\')\"></div>";
 pages.push( home );
 
