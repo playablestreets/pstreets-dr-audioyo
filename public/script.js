@@ -48,8 +48,6 @@ function goToPage(nextPageTitle, silent = false){
   setSquaresToPage(nextPage);
 
   setTimeout(foldFlippers, 0);
-  // setTimeout( destroyFlippers, destroyFlippersDelay );
-  // setTimeout( hideFlippers, hideFlippersDelay );
 
   if(!silent){
     setTimeout( () => playSound(nextPage.soundInTop), soundInTopDelay);
@@ -123,44 +121,13 @@ function showFlippers(){
   flipperBottom.style.visibility = "visible";
   flipperTop.style.transform = "rotateX(0deg)";
   flipperBottom.style.transform = "rotateY(0deg)";
-
-
-    // var flippers = document.getElementsByClassName("flipper");
-    // for(let flipper of flippers){
-    //   flipper.style.transform = "rotateX(0deg)"
-    //   flipper.style.opacity = "1";
-    //   flipper.style.transitionDuration = 0;
-    // }
 }
 
-function hideFlippers(){
-  var flipperTop = document.getElementById("flipper-top");
-  var flipperBottom = document.getElementById("flipper-bottom");
-  flipperTop.style.visibility = "hidden";
-  flipperBottom.style.visibility = "hidden";
-  flipperTop.style.transitionDuration = '0s';
-  flipperBottom.style.transitionDuration = '0s';
-  flipperBottom.style.transitionDelay = '0s';
-  flipperTop.style.transform = "rotateX(0deg)";
-  flipperTop.style.opacity = "1";
-  flipperBottom.style.transform = "rotateY(0deg)";
-  flipperBottom.style.opacity = "1";
-
-  // var flippers = document.getElementsByClassName("flipper");
-  // console.log(flippers);
-
-  // for( let flipper of flippers){
-  //   flipper.style.visibility = "hidden";
-  //   //set duration to instant so show flippers will be instantaneous
-  //   flipper.style.transitionDuration = 0;
-  // }
-}
 
 function createFlippers(){
   var flipper = document.createElement('div');
   flipper.className = "square flipper";
   flipper.id = "flipper-top";
-  // flipper.style.transform = "rotateX(0deg)"
   flipper.style.transformOrigin = "bottom center";
   flipper.style.perspectiveOrigin = "top center";
   squareBehindTop.appendChild(flipper);
@@ -168,7 +135,6 @@ function createFlippers(){
   flipper = document.createElement('div');
   flipper.className = "square flipper";
   flipper.id = "flipper-bottom";
-  // flipper.style.transform = "rotateY(0deg)"
   flipper.style.transformOrigin = "center left";
   flipper.style.perspectiveOrigin = "center right";
   squareBehindBottom.appendChild(flipper);
@@ -195,10 +161,6 @@ function destroyElementsByClassName(className){
   }
 }
 
-
-// function destroyFlippers(){
-//   destroyElementsByClassName("flipper");
-// }
 
 const appHeight = () => {
   document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
