@@ -32,17 +32,17 @@ function goToTheRoom(){
 function goToBumbag(){
   bumbagEntryPoint = currentPageTitle;
   stopSounds();
-  goToPage("bumbag", true);
+  goToPage("bumbag", true, true);
   startLoops();
 }
 
 function returnFromBumbag(){
   stopLoops();
-  goToPage(bumbagEntryPoint, true);
+  goToPage(bumbagEntryPoint, true, true);
 }
 
 
-function goToPage(nextPageTitle, silent = false){
+function goToPage(nextPageTitle, silent = false, noFlippers = false){
   var lastPage = getPageByTitle(currentPageTitle);
   var nextPage = getPageByTitle(nextPageTitle);
   
@@ -50,11 +50,14 @@ function goToPage(nextPageTitle, silent = false){
     stopSounds();
     playSound(lastPage.soundOut);
   }
-
-  overlayFlippers(lastPage);
+  
+  if(!noFlippers)
+    overlayFlippers(lastPage);
+  
   setSquaresToPage(nextPage);
 
-  setTimeout(foldFlippers, 0);
+  if(!noFlippers)
+    setTimeout(foldFlippers, 0);
 
   if(!silent){
     setTimeout( () => playSound(nextPage.soundInTop), soundInTopDelay);

@@ -53,7 +53,7 @@ pages.push( new Page(
   "page02", 
   "images/comic/p02.png", 
   "images/comic/p03.png",
-  "",
+  "<div class=\"bumbag-panel-button-page02\" onclick=goToBumbag()></div>",
   "<div class=\"p02-arrow-down arrow\" onclick=goToPage(\"page03\")></div>",
   "hello", "", "click"
 ));
@@ -63,9 +63,9 @@ pages.push( new Page(
   "page03", 
   "images/comic/p04.png", 
   "images/comic/p05.png",
-  "",
+  "<div class=\"bumbag-panel-button-page03-top\" onclick=goToBumbag()></div>",
   "<div class=\"p03-arrow-left arrow\" onclick=goToPage(\"page04\")></div>\
-  <div class=\"bumbag-panel-button\" onclick=goToBumbag()></div>\
+  <div class=\"bumbag-panel-button-page03-bottom\" onclick=goToBumbag()></div>\
   <div class=\"p03-arrow-right arrow\" onclick=goToPage(\"page05\")></div>",
   "clack", "hmm", ""
 ));
@@ -75,7 +75,7 @@ pages.push( new Page(
   "page04", 
   "images/comic/p06.png", 
   "images/comic/p07.png",
-  "",
+  "<div class=\"bumbag-panel-button-page04-top\" onclick=goToBumbag()></div>",
   "<div class=\"p04-arrow-down arrow\" onclick=goToPage(\"page07\")></div>\
    <div class=\"p04-arrow-up arrow\" onclick=goToPage(\"page06\")></div>",
    "streetscape1", "streetscape2", ""
@@ -86,7 +86,7 @@ pages.push( new Page(
   "page05", 
   "images/comic/p12.png", 
   "images/comic/p13.png",
-  "",
+  "<div class=\"bumbag-panel-button-page05-top\" onclick=goToBumbag()></div>",
   "<div class=\"p05-arrow-down arrow\" onclick=goToPage(\"page09\")></div>\
    <div class=\"p05-arrow-up arrow\" onclick=goToPage(\"page08\")></div>",
    "meow", "wind", ""
@@ -97,8 +97,9 @@ pages.push( new Page(
   "page06", 
   "images/comic/p08.png", 
   "images/comic/p09.png",
-  "",
-  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
+  "<div class=\"bumbag-panel-button-page06-top\" onclick=goToBumbag()></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>\
+  <div class=\"bumbag-panel-button-page06-bottom\" onclick=goToBumbag()></div>",
   "edge", "jump", ""
 ));
 
@@ -154,7 +155,7 @@ const bumbag = new Page(
 
 bumbag.hideSquareBackgrounds = true;
 bumbag.rectangleInnerHTML = "\
-<div class=\"bumbag-item\" style=\"background-image:url(\'images/bumbag/background.jpg\')\"></div>\
+<div class=\"bumbag-item\" style=\"background-image:url(\'images/bumbag/background.png\')\"></div>\
 <div class=\"bumbag-item bumbag-clickable bumbag-back\" onclick=returnFromBumbag() style=\"background-image:url(\'images/bumbag/back.png\')\"></div>\
 <div class=\"bumbag-item bumbag\" id=\"bumbag\" style=\"background-image:url(\'images/bumbag/bumbag.png\')\"></div>\
 <div class=\"bumbag-item bumbag-buttons\" id=\"bumbag-buttons\" style=\"background-image:url(\'images/bumbag/buttons.png\')\"></div>\

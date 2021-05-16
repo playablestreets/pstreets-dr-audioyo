@@ -332,12 +332,66 @@ html, body{
   left:calc( 35*var(--ah));
 }
 
-.bumbag-panel-button{
-  height:calc( 8*var(--ah));
-  width:calc( 10*var(--ah));
+.bumbag-panel-button-page02{
+  height:calc( 4*var(--ah));
+  width:calc( 5*var(--ah));
   position: relative;
-  top: calc( -12 * var(--ah));
-  right: calc( -8 * var(--ah));
+  top: calc( 1 * var(--ah));
+  right: calc( 4 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page03-top{
+  height:calc( 4*var(--ah));
+  width:calc( 5*var(--ah));
+  position: relative;
+  top: calc( -3 * var(--ah));
+  right: calc( -2 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page03-bottom{
+  height:calc( 4*var(--ah));
+  width:calc( 7*var(--ah));
+  position: relative;
+  top: calc( -13 * var(--ah));
+  right: calc( -7 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page04-top{
+  height:calc( 7*var(--ah));
+  width:calc( 15*var(--ah));
+  position: relative;
+  top: calc( 20 * var(--ah));
+  right: calc( -5 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page06-top{
+  height:calc( 5*var(--ah));
+  width:calc( 6*var(--ah));
+  position: relative;
+  top: calc( -7 * var(--ah));
+  right: calc( 12 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page06-bottom{
+  height:calc( 4*var(--ah));
+  width:calc( 7*var(--ah));
+  position: relative;
+  top: calc( 10 * var(--ah));
+  right: calc( -20 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page05-top{
+  height:calc( 5*var(--ah));
+  width:calc( 8*var(--ah));
+  position: relative;
+  top: calc( 5 * var(--ah));
+  right: calc( -9 * var(--ah));
   /* background-color: red; */
 }
 
@@ -416,4 +470,4 @@ html, body{
   top: calc( 75*var(--ah));
   left: calc( 33*var(--ah));
   height:calc( 10*var(--ah));
-}
+       
