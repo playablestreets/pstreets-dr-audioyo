@@ -10,6 +10,7 @@ class Sound{
   }
   makeLooping(){
     this.sound.loop = true;
+    this.sound.loopEnd = "15.95s";
   }
 }
 
