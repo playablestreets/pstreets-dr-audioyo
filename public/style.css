@@ -5,6 +5,13 @@
   --content-width: calc(var(--content-height)/ 2);
   --app-height: 100vh;
   overflow: hidden;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 html, body{
@@ -105,7 +112,7 @@ html, body{
   transition-duration: 0.2s;
 }
 
-.title-bus:hover{
+.title-bus:hover, .title-bus:active{
   height: calc( var(--app-height) * 0.2 );
 }
 

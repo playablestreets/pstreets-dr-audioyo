@@ -179,3 +179,5 @@ Tone.loaded().then(() => {
   // playSound("horn");
   sounds.hasLoaded = true;
 });
+
+window.addEventListener( 'touchmove', function() {});

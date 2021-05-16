@@ -154,5 +154,7 @@ const appHeight = () => {
   document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`)
   document.documentElement.style.setProperty('--ah', `${window.innerHeight * 0.01}px`);
 }
-  window.addEventListener('resize', appHeight)
-appHeight()
+window.addEventListener('resize', appHeight);
+appHeight();
+
+document.addEventListener("touchstart", function(){}, true);
