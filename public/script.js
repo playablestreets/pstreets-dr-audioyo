@@ -14,8 +14,8 @@ imagePreloader.preloadImages(startInteraction);
 
 //called after assets have loaded
 function startInteraction(){
+  foldFlippers();
   setSquaresToPage(getPageByTitle("home"));  
-  hideFlippers();
   document.getElementById("loading-screen").style.top = '110vh';
   setTimeout( ()=> {
     document.getElementById("loading-screen").style.display = "none";
