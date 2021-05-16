@@ -251,8 +251,6 @@ html, body{
   height: calc(var(--app-height)/2);
 }
 
-
-
 .window{
   background-size: contain;
   height:calc( 7*var(--ah));
@@ -324,7 +322,6 @@ html, body{
 .bumbag-clickable:hover{
   transform: scale(1.1);
 }
-
 
 .bumbag-back{
   width:calc( 15*var(--ah));
