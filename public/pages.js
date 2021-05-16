@@ -118,8 +118,9 @@ pages.push( new Page(
   "page08", 
   "images/comic/p14.png", 
   "images/comic/p15.png",
-  "",
-  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
+  "<div class=\"bumbag-panel-button-page08-top\" onclick=goToBumbag()></div>",
+  "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>\
+  <div class=\"bumbag-panel-button-page08-bottom\" onclick=goToBumbag()></div>",
   "purr", "cat", ""
 ));
 

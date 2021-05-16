@@ -392,6 +392,24 @@ html, body{
   /* background-color: red; */
 }
 
+.bumbag-panel-button-page08-top{
+  height:calc( 6*var(--ah));
+  width:calc( 11*var(--ah));
+  position: relative;
+  top: calc( 11 * var(--ah));
+  right: calc( -5 * var(--ah));
+  /* background-color: red; */
+}
+
+.bumbag-panel-button-page08-bottom{
+  height:calc( 6*var(--ah));
+  width:calc( 12*var(--ah));
+  position: relative;
+  top: calc( 21 * var(--ah));
+  right: calc( 35 * var(--ah));
+  /* background-color: red; */
+}
+
 .bumbag-buttons{
   height:calc( 8*var(--ah));
   width:calc( 20*var(--ah));
