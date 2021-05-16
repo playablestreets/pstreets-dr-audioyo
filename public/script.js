@@ -8,6 +8,7 @@ var hideFlippersDelay = 2500;
 var soundInTopDelay = 800;
 var soundInBottomDelay = 2100;
 var currentPageTitle = "home"
+var bumbagEntryPoint = "page03"
 
 createFlippers();
 imagePreloader.preloadImages(startInteraction);
@@ -29,9 +30,15 @@ function goToTheRoom(){
 }
 
 function goToBumbag(){
+  bumbagEntryPoint = currentPageTitle;
   stopSounds();
   goToPage("bumbag", true);
   startLoops();
+}
+
+function returnFromBumbag(){
+  stopLoops();
+  goToPage(bumbagEntryPoint, true);
 }
 
 

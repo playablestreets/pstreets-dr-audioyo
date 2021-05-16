@@ -41,8 +41,8 @@ pages.push( home );
 pages.push( new Page(
   "page01", 
   // "images/comic/p00title.jpg", 
-  "images/comic/p00light.jpg", 
-  "images/comic/p01.jpg",
+  "images/comic/p00light.png", 
+  "images/comic/p01.png",
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"page02\")></div>",
   "", "knock", ""
@@ -51,8 +51,8 @@ pages.push( new Page(
 // page02
 pages.push( new Page(
   "page02", 
-  "images/comic/p02.jpg", 
-  "images/comic/p03.jpg",
+  "images/comic/p02.png", 
+  "images/comic/p03.png",
   "",
   "<div class=\"p02-arrow-down arrow\" onclick=goToPage(\"page03\")></div>",
   "hello", "", "click"
@@ -61,8 +61,8 @@ pages.push( new Page(
 // page03
 pages.push( new Page(
   "page03", 
-  "images/comic/p04.jpg", 
-  "images/comic/p05.jpg",
+  "images/comic/p04.png", 
+  "images/comic/p05.png",
   "",
   "<div class=\"p03-arrow-left arrow\" onclick=goToPage(\"page04\")></div>\
   <div class=\"bumbag-panel-button\" onclick=goToBumbag()></div>\
@@ -73,8 +73,8 @@ pages.push( new Page(
 // page04
 pages.push( new Page(
   "page04", 
-  "images/comic/p06.jpg", 
-  "images/comic/p07.jpg",
+  "images/comic/p06.png", 
+  "images/comic/p07.png",
   "",
   "<div class=\"p04-arrow-down arrow\" onclick=goToPage(\"page07\")></div>\
    <div class=\"p04-arrow-up arrow\" onclick=goToPage(\"page06\")></div>",
@@ -84,8 +84,8 @@ pages.push( new Page(
 // page05
 pages.push( new Page(
   "page05", 
-  "images/comic/p12.jpg", 
-  "images/comic/p13.jpg",
+  "images/comic/p12.png", 
+  "images/comic/p13.png",
   "",
   "<div class=\"p05-arrow-down arrow\" onclick=goToPage(\"page09\")></div>\
    <div class=\"p05-arrow-up arrow\" onclick=goToPage(\"page08\")></div>",
@@ -95,8 +95,8 @@ pages.push( new Page(
 // page06
 pages.push( new Page(
   "page06", 
-  "images/comic/p08.jpg", 
-  "images/comic/p09.jpg",
+  "images/comic/p08.png", 
+  "images/comic/p09.png",
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "edge", "jump", ""
@@ -105,8 +105,8 @@ pages.push( new Page(
 // page07
 pages.push( new Page(
   "page07", 
-  "images/comic/p10.jpg", 
-  "images/comic/p11.jpg",
+  "images/comic/p10.png", 
+  "images/comic/p11.png",
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "smash", "laugh", ""
@@ -115,8 +115,8 @@ pages.push( new Page(
 // page08
 pages.push( new Page(
   "page08", 
-  "images/comic/p14.jpg", 
-  "images/comic/p15.jpg",
+  "images/comic/p14.png", 
+  "images/comic/p15.png",
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "purr", "cat", ""
@@ -125,8 +125,8 @@ pages.push( new Page(
 // page09
 pages.push( new Page(
   "page09", 
-  "images/comic/p16.jpg", 
-  "images/comic/p17.jpg",
+  "images/comic/p16.png", 
+  "images/comic/p17.png",
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"credits\")></div>",
   "fall", "splat", ""
@@ -135,8 +135,8 @@ pages.push( new Page(
 // credits
 pages.push( new Page(
   "credits", 
-  "images/comic/credits-top.jpg",
-  "images/comic/credits-bottom.jpg", 
+  "images/comic/credits-top.png",
+  "images/comic/credits-bottom.png", 
   "",
   "<div class=\"panel-button\" onclick=goToPage(\"home\")></div>",
   "", "", ""
@@ -145,8 +145,8 @@ pages.push( new Page(
 // bumbag
 const bumbag = new Page(
   "bumbag", 
-  "images/bumbag/bumbag-top.jpg", 
-  "images/bumbag/bumbag-bottom.jpg",
+  "", 
+  "",
   "",
   "",
   "", "", ""
@@ -155,7 +155,7 @@ const bumbag = new Page(
 bumbag.hideSquareBackgrounds = true;
 bumbag.rectangleInnerHTML = "\
 <div class=\"bumbag-item\" style=\"background-image:url(\'images/bumbag/background.jpg\')\"></div>\
-<div class=\"bumbag-item bumbag-clickable bumbag-back\" onclick=goToPage(\"page03\") style=\"background-image:url(\'images/bumbag/back.png\')\"></div>\
+<div class=\"bumbag-item bumbag-clickable bumbag-back\" onclick=returnFromBumbag() style=\"background-image:url(\'images/bumbag/back.png\')\"></div>\
 <div class=\"bumbag-item bumbag\" id=\"bumbag\" style=\"background-image:url(\'images/bumbag/bumbag.png\')\"></div>\
 <div class=\"bumbag-item bumbag-buttons\" id=\"bumbag-buttons\" style=\"background-image:url(\'images/bumbag/buttons.png\')\"></div>\
 <div class=\"bumbag-item bumbag-clickable bumbag-instrument\" id=\"bumbag-bass\" onClick=toggleLoopMute(\"bumbag-bass\") style=\"background-image:url(\'images/bumbag/bass.png\')\"></div>\
@@ -172,8 +172,8 @@ pages.push(bumbag);
 // blank
 pages.push( new Page(
   "blank", 
-  "images/comic/p00light.jpg", 
-  "images/comic/p00light.jpg",
+  "images/comic/p00light.png", 
+  "images/comic/p00light.png",
   "",
   "",
   "", "", ""
