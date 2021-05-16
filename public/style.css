@@ -182,7 +182,7 @@ html, body{
   position: absolute;
   width: calc(var(--app-height)/2);
   backface-visibility: hidden;
-  z-index: 998;
+  z-index: 5000;
 }
 
 .inner-container{
@@ -346,13 +346,11 @@ html, body{
   width:calc( 20*var(--ah));
   top: calc( 38*var(--ah));
   left: calc( 20*var(--ah));
-  /* animation: bumbag-dance 0.4s steps(3) infinite alternate-reverse; */
   transform-origin: bottom;
 }
 
 .bumbag{
   pointer-events: none;
-  /* animation: bumbag-dance 0.4s steps(3) infinite alternate; */
   height: calc(var(--app-height) * 0.6);
 }
 
